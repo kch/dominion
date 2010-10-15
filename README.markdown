@@ -4,10 +4,10 @@ Dominion is a library to extract information from a domain name.
 
 We're basically interested in two particulars:
 
-• The de facto TLD: this is the part of the domain a NIC would be responsible for.
-  It may be an honest-to-god TLD, or a ccTLD, and more importantly, a ccSLD.
+* _The de facto TLD_: this is the part of the domain a NIC would be responsible
+  for. It may be an honest-to-god TLD, or a ccTLD, and more importantly, a ccSLD.
 
-• The base domain. That is the domain that is registered with the NIC, clear of
+* _The base domain_: That is the domain that is registered with the NIC, clear of
   any subdomains.
 
 To resolve this we rely on the Mozilla Foundation's Public Suffix List, which can
