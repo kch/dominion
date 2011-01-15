@@ -713,7 +713,6 @@ operaunite.com
 
 // Requested by Eduardo Vela <evn@google.com> 2010-09-06
 appspot.com
-blogspot.com
 
 // coop : http://en.wikipedia.org/wiki/.coop
 coop
@@ -4242,6 +4241,7 @@ mil.to
 // tr : http://en.wikipedia.org/wiki/.tr
 *.tr
 !nic.tr
+!tsk.tr
 // Used by government in the TRNC
 // http://en.wikipedia.org/wiki/.nc.tr
 gov.nc.tr
@@ -4292,11 +4292,14 @@ club.tw
 
 // tz : http://en.wikipedia.org/wiki/.tz
 // Submitted by registry <randy@psg.com> 2008-06-17
+// Updated from http://www.tznic.or.tz/index.php/domains.html 2010-10-25
 ac.tz
 co.tz
 go.tz
+mil.tz
 ne.tz
 or.tz
+sc.tz
 
 // ua : http://www.nic.net.ua/
 ua
@@ -4458,7 +4461,7 @@ k12.de.us
 k12.fl.us
 k12.ga.us
 k12.gu.us
-k12.hi.us
+// k12.hi.us  Hawaii has a state-wide DOE login: bug 614565
 k12.ia.us
 k12.id.us
 k12.il.us
