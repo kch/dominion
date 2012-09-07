@@ -13,7 +13,7 @@ module Dominion
 
     # takes the path to a rule file in the format defined in http://publicsuffix.org/format/
     def self.load_rules_from_file(path)
-      rules open(path).lines.reject { |s| s =~ %r[\A\s*(//.*)?\Z\n?] }.map { |s| DomainSuffixRule.new(s) }.sort << DomainSuffixRule.new("*")
+      rules open(path, "r:UTF-8").lines.reject { |s| s =~ %r[\A\s*(//.*)?\Z\n?] }.map { |s| DomainSuffixRule.new(s) }.sort << DomainSuffixRule.new("*")
     end
 
     # takes a domain string as argument; i.e. the hostname part of a URL
