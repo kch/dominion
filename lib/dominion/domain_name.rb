@@ -11,7 +11,7 @@ module Dominion
       @rules
     end
 
-    # takes the path to a rule file in the format defined in http://publicsuffix.org/format/
+    # takes the path to a rule file in the format defined in http://publicsuffix.org/list/
     def self.load_rules_from_file(path)
       rules open(path, "r:UTF-8").lines.reject { |s| s =~ %r[\A\s*(//.*)?\Z\n?] }.map { |s| DomainSuffixRule.new(s) }.sort << DomainSuffixRule.new("*")
     end
