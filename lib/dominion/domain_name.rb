@@ -8,7 +8,7 @@ module Dominion
     # returns the current rule list or takes a new rule list; rules must be DomainSuffixRule instances.
     def self.rules(rules = nil)
       @rules = rules if rules
-      @rules
+      @rules || (superclass.rules if superclass.respond_to?(:rules))
     end
 
     # takes the path to a rule file in the format defined in http://publicsuffix.org/list/
