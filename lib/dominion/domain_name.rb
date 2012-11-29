@@ -28,6 +28,14 @@ module Dominion
       labels.length == rule.length
     end
 
+    # is this the root domain?
+    def base?
+      labels.length == rule.length.succ
+    end
+    alias_method :naked?, :base?
+    alias_method :root?,  :base?
+    alias_method :apex?,  :base?
+
     # returns the TLD part of the domain
     def tld
       domain(0)
@@ -37,6 +45,15 @@ module Dominion
     def base
       domain(1)
     end
+    alias_method :naked, :base
+    alias_method :root,  :base
+    alias_method :apex,  :base
+
+    # returns the complete hostname
+    def full
+      domain(labels.length - rule.length)
+    end
+    alias_method :to_s, :full
 
     # return the domain with the specified number of extra labels over the TLD. Used internally.
     def domain(non_tld_label_count = 1)
